@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Material+Icons')
+@import '~react-md/src/scss/react-md'
+@import 'theme.sass'
+
+@include react-md-everything
+
+body
+  margin: 0
+.maincontent
+  margin-top: 68px
+.eventlist
+  margin: 0 12px 36px 12px
+.eventlist--title::first-letter
+  text-transform: capitalize
+.eventitem--header
+  display: flex
+  flex-direction: row
+.eventitem--time
+  margin-right: auto
+  margin-bottom: 0
+.eventitem--info
+  white-space: pre-line
+  text-align: justify
