@@ -14,10 +14,10 @@ module.exports = {
       options: {
         name: config.siteTitle,
         short_name: config.siteShortName,
-        start_url: config.pathPrefix,
+        start_url: '/',
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: config.displayMode,
+        display: 'standalone',
         icon: [
           {
             src: `/icons/icon-192x192.png`,
