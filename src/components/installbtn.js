@@ -4,7 +4,7 @@ import { FontIcon, Button } from 'react-md'
 class InstallBtn extends Component {
   constructor(props) {
     super(props)
-    this.state = { installIcon: false, deferredPrompt: null }
+    this.state = { installIcon: false }
     this.toogleInstallIcon = this.toogleInstallIcon.bind(this)
     this.showInstallPrompt = this.showInstallPrompt.bind(this)
   }
@@ -15,7 +15,7 @@ class InstallBtn extends Component {
     }))
   }
 
-  showInstallPrompt() {
+  showInstallPrompt(deferredPrompt) {
     // hide our user interface that shows our A2HS button
     this.toogleInstallIcon()
     // Show the prompt
@@ -38,7 +38,7 @@ class InstallBtn extends Component {
       // Prevent Chrome 67 and earlier from automatically showing the prompt
       e.preventDefault()
       // Stash the event so it can be triggered later.
-      this.deferredPrompt = e
+      deferredPrompt = e
       this.toogleInstallIcon()
     })
   }
