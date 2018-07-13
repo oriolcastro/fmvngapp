@@ -4,7 +4,7 @@ import MainLayout from '../components/mainlayout'
 import EventList from '../components/eventlist'
 import { connect } from 'react-redux'
 
-const IndexPage = ({ data, selection, menuItems }) => {
+const IndexPage = ({ data, selection }) => {
   return (
     <MainLayout>
       {data.allStrapiEventlist.edges.map(({ node }, i) => (
@@ -26,7 +26,6 @@ const IndexPage = ({ data, selection, menuItems }) => {
 
 export default connect(state => ({
   selection: state.app.selection,
-  menuItems: state.app.menuItems,
 }))(IndexPage)
 
 export const query = graphql`
