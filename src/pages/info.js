@@ -3,11 +3,11 @@ import React from 'react'
 import SecondaryLayout from '../components/secondarylayout'
 
 const Information = ({}) => (
-  <SecondaryLayout headerTitle="Informació">
+  <SecondaryLayout headerTitle="Informació sobre l'app">
     <div className="fav--container">
-      <h1>Sobre l'app</h1>
       <p>
-        Informació sobre l'app, sobre Ok Studio, links, web, xxss, i info meva
+        Informació sobre l'aplicació, sobre Ok Studio, links, web, xxss, i info
+        meva
       </p>
     </div>
   </SecondaryLayout>

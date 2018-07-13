@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 const links = [
   {
-    label: 'Activitats',
+    label: 'Programa',
     icon: <FontIcon>event</FontIcon>,
     to: '/',
     component: Link,
@@ -16,7 +16,7 @@ const links = [
     component: Link,
   },
   {
-    label: 'Sobre',
+    label: 'Informació',
     icon: <FontIcon>info</FontIcon>,
     to: '/info',
     component: Link,

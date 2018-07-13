@@ -9,7 +9,7 @@ const IndexPage = ({ data, selection }) => {
     <MainLayout>
       {data.allStrapiEventlist.edges.map(({ node }, i) => (
         <div>
-          {selection === 'Tots' ? (
+          {selection === 'Tots els dies' ? (
             <EventList key={i} day={node.Day} events={node.events} />
           ) : (
             <div>

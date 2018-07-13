@@ -1,7 +1,7 @@
 const initialState = {
-  selection: 'Tots',
+  selection: 'Tots els dies',
   menuItems: [
-    'Tots',
+    'Tots els dies',
     'Dilluns 16',
     'Dimarts 17',
     'Dimecres 18',
