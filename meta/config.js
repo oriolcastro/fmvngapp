@@ -10,4 +10,5 @@ module.exports = {
   copyright: '', // Copyright string for the footer of the website and RSS feed.
   themeColor: '#007FFF',
   backgroundColor: '#fff',
+  googleAnalytics: 'UA-121776060-2',
 }
