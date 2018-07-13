@@ -20,9 +20,7 @@ const MainHeader = ({ selection, changeSelection, menuItems }) => (
           }}
         />
       }
-    >
-      <InstallBtn />
-    </Toolbar>
+    />
   </div>
 )
 
