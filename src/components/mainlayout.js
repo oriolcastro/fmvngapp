@@ -7,7 +7,7 @@ import MainHeader from './mainheader'
 import Navigation from './navigation'
 import '../styles/main.sass'
 import Config from '../../meta/config'
-import favicon from './img/favicon.ico'
+import favicon from '../img/favicon.ico'
 const MainLayout = ({ children }) => (
   <>
     <Helmet>
