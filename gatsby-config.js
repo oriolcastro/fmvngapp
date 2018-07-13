@@ -24,9 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.STRAPI_URL || ``,
+        apiURL: 'https://okstudio-fmvng18-backend.herokuapp.com',
         contentTypes: [`event`, `eventlist`, `user`],
-        // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: process.env.STRAPI_USER || '',
           password: process.env.STRAPI_PASSWORD || '',

@@ -35,7 +35,6 @@ export const query = graphql`
       edges {
         node {
           Day(formatString: "dddd DD MMMM", locale: "ca")
-          MyDay: Day(formatString: "dddd DD", locale: "ca")
           Title
           events {
             Title
