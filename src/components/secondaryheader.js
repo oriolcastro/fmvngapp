@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Toolbar, SelectField } from 'react-md'
 
 import ToolbarMenu from './toolbarmenu'
+import InstallBtn from './installbtn'
 
 const SecondaryHeader = ({
   selection,
@@ -10,8 +11,13 @@ const SecondaryHeader = ({
   siteTitle,
 }) => (
   <div>
-    <Toolbar colored fixed={true} title={siteTitle} id="toolbar-title-menu" />}
-    />
+    <Toolbar
+      colored
+      fixed={true}
+      title={siteTitle}
+      id="toolbar-title-menu"
+      actions={<InstallBtn />}
+    />} />
   </div>
 )
 
