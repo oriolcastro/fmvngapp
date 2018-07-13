@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { FontIcon } from 'react-md'
+import { FontIcon, Button } from 'react-md'
 
 class InstallBtn extends Component {
   constructor(props) {
     super(props)
-    this.state = { installIcon: false }
+    this.state = { installIcon: false, deferredPrompt: null }
     this.toogleInstallIcon = this.toogleInstallIcon.bind(this)
     this.showInstallPrompt = this.showInstallPrompt.bind(this)
   }
@@ -38,7 +38,7 @@ class InstallBtn extends Component {
       // Prevent Chrome 67 and earlier from automatically showing the prompt
       e.preventDefault()
       // Stash the event so it can be triggered later.
-      deferredPrompt = e
+      this.deferredPrompt = e
       this.toogleInstallIcon()
     })
 
@@ -63,7 +63,14 @@ class InstallBtn extends Component {
     return (
       <div>
         {this.state.installIcon && (
-          <FontIcon onClick={this.showInstallPrompt}>cloud_download</FontIcon>
+          <Button
+            icon
+            secondary
+            id="btnInstall"
+            onClick={this.showInstallPrompt}
+          >
+            cloud_download
+          </Button>
         )}
       </div>
     )
