@@ -11,7 +11,9 @@ const SecondaryHeader = ({
   siteTitle,
 }) => (
   <div>
-    <Toolbar colored fixed={true} title={siteTitle} id="toolbar-title-menu" />
+    <Toolbar colored fixed={true} title={siteTitle} id="toolbar-title-menu">
+      <InstallBtn />
+    </Toolbar>
   </div>
 )
 
