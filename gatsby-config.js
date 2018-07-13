@@ -10,6 +10,18 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'GatsbyJS',
+        short_name: 'GatsbyJS',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'minimal-ui',
+        icon: 'src/img/icon-512x512.png', // This path is relative to the root of the site.
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: 'https://okstudio-fmvng18-backend.herokuapp.com',
