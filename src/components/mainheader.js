@@ -18,10 +18,11 @@ const MainHeader = ({ selection, changeSelection, menuItems }) => (
           onChange={value => {
             changeSelection(value)
           }}
-          actions={<InstallBtn />}
         />
       }
-    />
+    >
+      <InstallBtn />
+    </Toolbar>
   </div>
 )
 
