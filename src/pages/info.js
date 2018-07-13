@@ -1,12 +1,16 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import SecondaryLayout from '../components/secondarylayout'
 
 const Information = ({}) => (
-  <Layout>
-    <h1>Informació</h1>
-    <p>Welcome to page 2</p>
-  </Layout>
+  <SecondaryLayout headerTitle="Informació">
+    <div className="fav--container">
+      <h1>Sobre l'app</h1>
+      <p>
+        Informació sobre l'app, sobre Ok Studio, links, web, xxss, i info meva
+      </p>
+    </div>
+  </SecondaryLayout>
 )
 
 export default Information
