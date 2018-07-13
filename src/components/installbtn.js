@@ -4,7 +4,7 @@ import { FontIcon, Button } from 'react-md'
 class InstallBtn extends Component {
   constructor(props) {
     super(props)
-    this.state = { installIcon: false }
+    this.state = { installIcon: false, event: null }
     this.toogleInstallIcon = this.toogleInstallIcon.bind(this)
     this.showInstallPrompt = this.showInstallPrompt.bind(this)
   }
@@ -39,6 +39,8 @@ class InstallBtn extends Component {
       e.preventDefault()
       // Stash the event so it can be triggered later.
       deferredPrompt = e
+      console.log(deferredPrompt)
+      this.event = e
       this.toogleInstallIcon()
     })
   }
@@ -48,6 +50,7 @@ class InstallBtn extends Component {
       <div>
         {this.state.installIcon && (
           <div className="installbtn--wrapper">
+            <span className="installbtn--text">Instalar</span>
             <Button
               icon
               secondary
@@ -56,7 +59,6 @@ class InstallBtn extends Component {
             >
               cloud_download
             </Button>
-            <span className="installbtn--text">Instalar</span>
           </div>
         )}
       </div>
