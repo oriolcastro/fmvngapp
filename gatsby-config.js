@@ -18,7 +18,18 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: config.displayMode,
-        icon: '/icons/icon.png',
+        icon: [
+          {
+            src: `/icons/icon-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/icons/icon-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     {
