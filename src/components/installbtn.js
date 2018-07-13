@@ -41,7 +41,7 @@ class InstallBtn extends Component {
       deferredPrompt = e
       this.toogleInstallIcon()
     })
-    document.getElementById(btnInstall).addEventListener('click', e => {
+    document.getElementById('btnInstall').addEventListener('click', e => {
       // hide our user interface that shows our A2HS button
       this.toogleInstallIcon() // Show the prompt
       deferredPrompt.prompt()
@@ -62,8 +62,8 @@ class InstallBtn extends Component {
       <div
         className={
           this.state.installIcon
-            ? 'installbtn--wrapper installbtn--show'
-            : 'installbtn--wrapper installbtn--hide'
+            ? 'installbtn--wrapperShow'
+            : 'installbtn--wrapperHide'
         }
         id="btnInstall"
       >
