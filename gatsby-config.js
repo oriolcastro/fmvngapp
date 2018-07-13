@@ -12,13 +12,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'GatsbyJS',
-        short_name: 'GatsbyJS',
+        name: 'Programa FMVng',
+        short_name: 'FMVNG18',
         start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
-        display: 'minimal-ui',
-        icon: 'src/img/icon-512x512.png', // This path is relative to the root of the site.
+        background_color: '#fff',
+        theme_color: '#FFC107',
+        display: 'standalone',
+        icon: 'src/img/icon-512x512.png',
       },
     },
     {
