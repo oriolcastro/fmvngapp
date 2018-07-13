@@ -61,7 +61,7 @@ class InstallBtn extends Component {
     return (
       <div
         className={
-          installIcon
+          this.state.installIcon
             ? 'installbtn--wrapper installbtn--show'
             : 'installbtn--wrapper installbtn--hide'
         }
