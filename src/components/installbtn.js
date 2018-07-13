@@ -59,15 +59,18 @@ class InstallBtn extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.installIcon && (
-          <div className="installbtn--wrapper" id="btnInstall">
-            <span className="installbtn--text">Instalar</span>
-            <Button icon secondary>
-              cloud_download
-            </Button>
-          </div>
-        )}
+      <div
+        className={
+          installIcon
+            ? 'installbtn--wrapper installbtn--show'
+            : 'installbtn--wrapper installbtn--hide'
+        }
+        id="btnInstall"
+      >
+        <span className="installbtn--text">Instalar</span>
+        <Button icon secondary>
+          cloud_download
+        </Button>
       </div>
     )
   }
