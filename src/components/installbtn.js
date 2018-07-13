@@ -4,9 +4,8 @@ import { FontIcon, Button } from 'react-md'
 class InstallBtn extends Component {
   constructor(props) {
     super(props)
-    this.state = { installIcon: false, event: null }
+    this.state = { installIcon: false }
     this.toogleInstallIcon = this.toogleInstallIcon.bind(this)
-    this.showInstallPrompt = this.showInstallPrompt.bind(this)
   }
 
   toogleInstallIcon() {
