@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: "Programa FMVng '18",
+  siteTitle: 'Programa FMVng 2018',
   siteShortName: 'FMVNG18', // Site title.
   siteTitleAlt: 'Programa FM Vilanova 2018', // Alternative site title for SEO.
   siteLogo: '/icons/icon-512x512.png', // Logo used for SEO and manifest.
