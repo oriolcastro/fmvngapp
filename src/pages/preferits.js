@@ -1,5 +1,4 @@
 import React from 'react'
-import { FontIcon } from 'react-md'
 import SecondaryLayout from '../components/secondarylayout'
 import NewEventsList from '../components/neweventslist'
 
