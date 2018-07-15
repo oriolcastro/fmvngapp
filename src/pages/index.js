@@ -47,7 +47,7 @@ export const query = graphql`
           Day(formatString: "dddd DD MMMM", locale: "ca")
           Title
           events {
-            Id
+            id
             Title
             Time
             Info
