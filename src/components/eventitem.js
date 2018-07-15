@@ -8,10 +8,20 @@ class EventItem extends Component {
     super()
     this.state = { isFav: false }
     this.newEvent = new Event()
+    this.addEvent = this.addEvent.bind(this)
+    this.deleteEvent = this.deleteEvent.bind(this)
+    this.onClickBtn = this.onClickBtn.bind(this)
+  }
+
+  onClickBtn() {
+    if (this.state.isFav === true) {
+      this.deleteEvent()
+    } else {
+      this.addEvent()
+    }
   }
 
   addEvent() {
-    this.setState({ isFav: true })
     const event = new Event()
     event.apiid = this.props.apiid
     event.title = this.props.title
@@ -19,11 +29,12 @@ class EventItem extends Component {
     event.day = this.props.day
     event.info = this.props.info
     this.props.addHandler(event)
+    this.setState({ isFav: true })
   }
 
   deleteEvent() {
-    this.setState({ isFav: false })
     this.props.deleteHandler(this.props.apiid)
+    this.setState({ isFav: false })
   }
 
   render() {
@@ -36,7 +47,7 @@ class EventItem extends Component {
               icon
               disabled={this.state.isFav ? false : true}
               secondary
-              onClick={this.state.isFav ? deleteEvent : addEvent}
+              onClick={this.onClickBtn}
             >
               favorite
             </Button>

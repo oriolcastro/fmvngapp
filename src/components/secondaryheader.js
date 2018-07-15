@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { Toolbar, SelectField } from 'react-md'
+import React from 'react'
+import { Toolbar } from 'react-md'
 
-import ToolbarMenu from './toolbarmenu'
 import InstallBtn from './installbtn'
 
 const SecondaryHeader = ({

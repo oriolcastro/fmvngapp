@@ -2,7 +2,7 @@ import React from 'react'
 
 import SecondaryLayout from '../components/secondarylayout'
 
-const Information = ({}) => (
+const Information = () => (
   <SecondaryLayout headerTitle="Informació sobre l'app">
     <div className="fav--container">
       <p>

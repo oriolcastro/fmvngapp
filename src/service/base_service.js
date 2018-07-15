@@ -34,19 +34,19 @@ export class BaseService {
         ]),
         new Column('apiid')
           .options([COL_OPTION.NotNull])
-          .setDataType(DADATA_TYPE.String),
+          .setDataType(DATA_TYPE.String),
         new Column('title')
           .options([COL_OPTION.NotNull])
-          .setDataType(DADATA_TYPE.String),
+          .setDataType(DATA_TYPE.String),
         new Column('time')
           .options([COL_OPTION.NotNull])
-          .setDataType(DADATA_TYPE.String),
+          .setDataType(DATA_TYPE.String),
         new Column('day')
           .options([COL_OPTION.NotNull])
-          .setDataType(DADATA_TYPE.String),
+          .setDataType(DATA_TYPE.String),
         new Column('info')
           .options([COL_OPTION.NotNull])
-          .setDataType(DADATA_TYPE.String),
+          .setDataType(DATA_TYPE.String),
       ],
     }
 
