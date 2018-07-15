@@ -1,14 +1,12 @@
 import React from 'react'
 import { FontIcon } from 'react-md'
 import SecondaryLayout from '../components/secondarylayout'
+import NewEventsList from '../components/neweventslist'
 
 const Favorites = ({}) => (
   <SecondaryLayout headerTitle="Els meus preferits">
     <div className="fav--container">
-      <p>
-        Aquí podràs guardar les teves activitats preferides de la Festa Major
-        per a tenir-les sempre a ma
-      </p>
+      <NewEventsList showEvents="favs" />
     </div>
   </SecondaryLayout>
 )
