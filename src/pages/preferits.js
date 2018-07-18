@@ -1,11 +1,11 @@
 import React from 'react'
 import SecondaryLayout from '../components/secondarylayout'
-import NewEventsList from '../components/neweventslist'
+import EventsList from '../components/eventslist'
 
 const Favorites = () => (
   <SecondaryLayout headerTitle="Els meus preferits">
     <div className="fav--container">
-      <NewEventsList showEvents="favs" />
+      <EventsList showFavs={true} events={[]} />
     </div>
   </SecondaryLayout>
 )

@@ -1,15 +1,18 @@
 import React from 'react'
+import { Grid, Cell } from 'react-md'
 
 import SecondaryLayout from '../components/secondarylayout'
 
 const Information = () => (
   <SecondaryLayout headerTitle="Informació sobre l'app">
-    <div className="fav--container">
-      <p>
-        Informació sobre l'aplicació, sobre Ok Studio, links, web, xxss, i info
-        meva
-      </p>
-    </div>
+    <Grid>
+      <Cell>
+        <p>
+          Informació sobre l'aplicació, sobre Ok Studio, links, web, xxss, i
+          info meva
+        </p>
+      </Cell>
+    </Grid>
   </SecondaryLayout>
 )
 

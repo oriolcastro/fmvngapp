@@ -1,8 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import MainLayout from '../components/mainlayout'
-import EventList from '../components/eventlist'
-import NewEventsList from '../components/neweventslist'
+import EventsList from '../components/eventslist'
 import { connect } from 'react-redux'
 
 const IndexPage = ({ data, selection }) => {
@@ -11,20 +10,20 @@ const IndexPage = ({ data, selection }) => {
       {data.allStrapiEventlist.edges.map(({ node }, id) => (
         <div>
           {selection === 'Tots els dies' ? (
-            <NewEventsList
-              key={id}
+            <EventsList
               day={node.Day}
               events={node.events}
-              showEvents="all"
+              showFavs={false}
+              key={node.id}
             />
           ) : (
             <div>
               {selection === node.Title && (
-                <NewEventsList
-                  key={id}
+                <EventsList
                   day={node.Day}
                   events={node.events}
-                  showEvents="all"
+                  showFavs={false}
+                  key={node.id}
                 />
               )}
             </div>
@@ -52,6 +51,8 @@ export const query = graphql`
             Title
             Time
             Info
+            Day(formatString: "dddd DD", locale: "ca")
+            isFav
           }
         }
       }
