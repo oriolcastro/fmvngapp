@@ -2,9 +2,6 @@ const initialState = {
   selection: 'Tots els dies',
   menuItems: [
     'Tots els dies',
-    'Dilluns 16',
-    'Dimarts 17',
-    'Dimecres 18',
     'Dijous 19',
     'Divendres 20',
     'Dissabte 21',

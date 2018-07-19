@@ -22,6 +22,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.MY_GOOGLE_ANALYTICS_TRACKING_ID || '',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: 'https://okstudio-fmvng18-backend.herokuapp.com',

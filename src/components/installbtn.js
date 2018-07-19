@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FontIcon, Button } from 'react-md'
+import { Button } from 'react-md'
 
 class InstallBtn extends Component {
   constructor(props) {

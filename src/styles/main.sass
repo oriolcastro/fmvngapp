@@ -8,21 +8,33 @@ body
   margin: 0
 .maincontent
   margin-top: 68px
-.eventlist
+.eventslist
   margin: 0 12px 36px 12px
-.eventlist--title::first-letter
+.eventslist--title::first-letter
   text-transform: capitalize
 .eventitem--header
   display: flex
   flex-direction: row
+  margin-bottom: 0
+.eventslist--emptymessage
+  white-space: pre-line
+.eventslist--emptyicon
+  text-align: center
 .eventitem--time
   margin-right: auto
+  align-self: center
   margin-bottom: 0
+.eventitem--time::first-letter
+  text-transform: capitalize
+.eventitem--content
+  margin-top: 0
 .eventitem--info
   white-space: pre-line
   text-align: justify
-.fav--container
-  margin: 0 12px 36px 12px
+.eventitem--favtrue
+  color: $md-secondary-color
+.eventitem--favfalse
+  color: $md-grey-500
 .installbtn--wrapperShow
   margin: 4px 12px 4px 0
   display: flex
@@ -35,3 +47,25 @@ body
   margin: auto
   font-size: 1.15rem
   font-weight: bold
+.infopage--coverimage
+  width: 100%
+.infopage--devinfo
+  display: flex
+  flex-direction: row
+.infopage--logo
+  max-width: 120px
+  max-height: 120px
+.infopage--myinfo
+  margin: auto
+.infopage--links
+  text-decoration: none
+  color: #007FFF
+.infopage--xxss
+  margin: 4px
+.infopage--text
+  text-align: justify
+.infopage--legal
+  font-size: 0.9rem
+  text-align: justify
+  white-space: pre-line
+  margin-top: 24px
