@@ -5,7 +5,7 @@ import EventsList from '../components/eventslist'
 const Favorites = () => (
   <SecondaryLayout headerTitle="Els meus preferits">
     <div className="fav--container">
-      <EventsList showFavs={true} events={[]} />
+      <EventsList showFavs={true} list={[]} />
     </div>
   </SecondaryLayout>
 )

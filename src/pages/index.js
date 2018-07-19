@@ -12,7 +12,7 @@ const IndexPage = ({ data, selection }) => {
           {selection === 'Tots els dies' ? (
             <EventsList
               day={node.Day}
-              events={node.events}
+              list={node.events}
               showFavs={false}
               key={node.id}
             />
@@ -21,7 +21,7 @@ const IndexPage = ({ data, selection }) => {
               {selection === node.Title && (
                 <EventsList
                   day={node.Day}
-                  events={node.events}
+                  list={node.events}
                   showFavs={false}
                   key={node.id}
                 />

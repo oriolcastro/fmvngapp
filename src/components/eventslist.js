@@ -7,12 +7,12 @@ import {
   deleteEventFromDb,
   addEventToDb,
   getAllEventsFromDb,
-} from '../db/events'
+} from '../db/eventsdb'
 
 class EventsList extends Component {
   constructor(props) {
     super(props)
-    this.state = { events: props.events }
+    this.state = { events: props.list }
     this.addEvent = this.addEvent.bind(this)
     this.deleteEvent = this.deleteEvent.bind(this)
     this.loadFavEvents = this.loadFavEvents.bind(this)
@@ -23,17 +23,12 @@ class EventsList extends Component {
   }
 
   componentDidUpdate() {
-    let e = onRouteUpdate
-    console.log(e)
-    if (e === true) {
-      console.log(e)
-      this.loadFavEvents()
-    }
+    this.loadFavEvents()
   }
 
   loadFavEvents() {
     if (this.props.showFavs === true) {
-      getAllEventsFromDb().then(events => this.setState({ events: events }))
+      getAllEventsFromDb().then(favs => this.setState({ events: favs }))
     } else {
       getAllEventsFromDb().then(favs => {
         if (favs.length === 0) {
@@ -87,10 +82,6 @@ class EventsList extends Component {
   }
 
   render() {
-    console.log('List is rendered')
-    if (onRouteUpdate === true) {
-      this.loadFavEvents()
-    }
     return (
       <div className="eventslist">
         <h1 className="eventslist--title">{this.props.day}</h1>
@@ -122,7 +113,7 @@ class EventsList extends Component {
 EventsList.propTypes = {
   day: PropTypes.string,
   showFavs: PropTypes.bool,
-  events: PropTypes.arrayOf(
+  list: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,

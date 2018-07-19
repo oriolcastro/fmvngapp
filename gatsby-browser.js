@@ -14,6 +14,3 @@ export const replaceRouterComponent = ({ history }) => {
   )
   return ConnectedRouterWrapper
 }
-export const onRouteUpdate = ({ location }) => {
-  return true
-}
