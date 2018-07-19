@@ -88,6 +88,9 @@ class EventsList extends Component {
 
   render() {
     console.log('List is rendered')
+    if (onRouteUpdate === true) {
+      this.loadFavEvents()
+    }
     return (
       <div className="eventslist">
         <h1 className="eventslist--title">{this.props.day}</h1>
