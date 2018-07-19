@@ -44,6 +44,7 @@ class EventsList extends Component {
               ev[index].isFav = 'true'
             }
           })
+          console.log(ev)
           this.setState({ events: ev })
         }
       })
