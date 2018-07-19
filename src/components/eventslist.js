@@ -46,9 +46,9 @@ class EventsList extends Component {
               x.isFav = false
             }
           })
+          this.setState({ events: ev })
         }
       })
-
       return
     }
     return
