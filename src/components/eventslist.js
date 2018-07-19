@@ -26,7 +26,6 @@ class EventsList extends Component {
       getAllEventsFromDb().then(events => this.setState({ events: events }))
     } else {
       getAllEventsFromDb().then(favs => {
-        console.log(favs)
         if (favs.length === 0) {
           return
         } else {
@@ -78,6 +77,7 @@ class EventsList extends Component {
   }
 
   render() {
+    console.log('List is rendered')
     return (
       <div className="eventslist">
         <h1 className="eventslist--title">{this.props.day}</h1>

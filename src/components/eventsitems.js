@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Grid, Cell, Button, Divider, Paper } from 'react-md'
 
 class EventsItems extends Component {
