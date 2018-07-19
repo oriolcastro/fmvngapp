@@ -21,8 +21,8 @@ class EventsList extends Component {
     this.loadFavEvents()
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (this.props.events !== prevProps.events) {
+  componentDidUpdate(prevProps) {
+    if (prevProps.pathname !== this.props.pathname) {
       this.loadFavEvents()
     }
   }
