@@ -22,8 +22,11 @@ class EventsList extends Component {
     this.loadFavEvents()
   }
 
-  componentDidUpdate() {
-    this.loadFavEvents()
+  componentDidUpdate(prevProps) {
+    if (this.props.showFavs !== prevProps.showFavs) {
+      console.log('update component')
+      this.loadFavEvents()
+    }
   }
 
   loadFavEvents() {
