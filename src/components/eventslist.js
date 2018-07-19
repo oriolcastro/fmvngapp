@@ -26,22 +26,23 @@ class EventsList extends Component {
       getAllEventsFromDb().then(events => this.setState({ events: events }))
     } else {
       getAllEventsFromDb().then(favs => {
-        let ev = [...this.state.events]
         console.log(favs)
-        favs.forEach(arrayItem => {
-          let index = ev.findIndex(x => x.id === arrayItem.id)
-          console.log(index)
-          if (index >= 0) {
-            ev[index].isFav = 'true'
-          }
-        })
-        this.setState({ events: ev })
+        if (favs.length === 0) {
+          return
+        } else {
+          let ev = [...this.state.events]
+          favs.forEach(arrayItem => {
+            let index = ev.findIndex(x => x.id === arrayItem.id)
+            if (index >= 0) {
+              ev[index].isFav = 'true'
+            }
+          })
+          this.setState({ events: ev })
+        }
       })
+      return
     }
-    if (this.state.favsEmpty === true) {
-      const EmptyList = () => <p>The list is empty</p>
-    } else {
-    }
+    return
   }
 
   btnClicked = a => {
@@ -68,7 +69,7 @@ class EventsList extends Component {
     let index = ev.findIndex(x => x.id === b.id)
     ev[index].isFav = 'false'
     if (this.props.showFavs === true) {
-      ev = ev.splice(index, 1)
+      ev.splice(index, 1)
       this.setState({ events: ev })
     } else {
       ev[index].isFav = false
@@ -90,9 +91,13 @@ class EventsList extends Component {
           <Grid>
             <Cell>
               <h3 className="eventslist--emptymessage">
-                No has guardat cap activitat com a preferida. Ves a la pàgina
-                del programa i comença a afegir-ne
+                La teva llista de preferits està buida.
               </h3>
+              <div className="eventslist--emptyicon">
+                <FontIcon forceSize={80} forceFontSize={true} secondary>
+                  favorite
+                </FontIcon>
+              </div>
             </Cell>
           </Grid>
         )}
