@@ -37,16 +37,18 @@ class EventsList extends Component {
         if (events.length === 0) {
           return
         } else {
-          let ev = [...this.props.events]
-          events.forEach(arrayItem => {
-            let index = ev.findIndex(x => x.id === arrayItem.id)
+          let ev = [...this.state.events]
+          ev.forEach(x => {
+            let index = events.findIndex(y => y.id === x.id)
             if (index >= 0) {
-              ev[index].isFav = 'true'
+              x.isFav = true
+            } else {
+              x.isFav = false
             }
           })
-          this.setState({ events: ev })
         }
       })
+
       return
     }
     return
