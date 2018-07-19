@@ -16,7 +16,7 @@ module.exports = {
     'Vilanova',
     'FMVng',
   ], // Copyright string for the footer of the website and RSS feed.
-  themeColor: '#FFC107',
+  themeColor: '#FFA000',
   backgroundColor: '#fff',
   googleAnalytics: 'UA-121776060-2',
 }
