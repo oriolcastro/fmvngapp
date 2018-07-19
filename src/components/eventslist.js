@@ -12,7 +12,7 @@ import {
 class EventsList extends Component {
   constructor(props) {
     super(props)
-    this.state = { events: props.list }
+    this.state = { events: props.events }
     this.addEvent = this.addEvent.bind(this)
     this.deleteEvent = this.deleteEvent.bind(this)
     this.loadFavEvents = this.loadFavEvents.bind(this)
@@ -28,7 +28,7 @@ class EventsList extends Component {
 
   loadFavEvents() {
     if (this.props.showFavs === true) {
-      getAllEventsFromDb().then(favs => this.setState({ events: favs }))
+      getAllEventsFromDb().then(events => this.setState({ events: events }))
     } else {
       getAllEventsFromDb().then(favs => {
         if (favs.length === 0) {
@@ -113,7 +113,7 @@ class EventsList extends Component {
 EventsList.propTypes = {
   day: PropTypes.string,
   showFavs: PropTypes.bool,
-  list: PropTypes.arrayOf(
+  events: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
