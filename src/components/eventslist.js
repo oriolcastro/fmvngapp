@@ -21,6 +21,12 @@ class EventsList extends Component {
     this.loadFavEvents()
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.events !== prevProps.events) {
+      this.loadFavEvents()
+    }
+  }
+
   loadFavEvents() {
     if (this.props.showFavs === true) {
       getAllEventsFromDb().then(events => this.setState({ events: events }))
