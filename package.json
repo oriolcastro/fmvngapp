@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Ok! Studio <hola@okstudio.tech>",
   "dependencies": {
-    "gatsby": "^2.0.0-beta.37",
+    "gatsby": "^2.0.0-beta.47",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-netlify": "next",
