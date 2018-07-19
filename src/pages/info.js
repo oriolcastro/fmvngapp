@@ -3,15 +3,18 @@ import { Grid, Cell } from 'react-md'
 import FaInstagram from 'react-icons/lib/fa/instagram'
 import FaTwitter from 'react-icons/lib/fa/twitter-square'
 import FaGithub from 'react-icons/lib/fa/github-square'
-import logo from '../img/icon-512x512.png'
-import logook from '../img/logook.png'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import SecondaryLayout from '../components/secondarylayout'
 
 const Information = () => (
   <SecondaryLayout headerTitle="Informació sobre l'app">
     <Grid>
       <Cell>
-        <img src="/img/og-image.jpg" className="infopage--coverimage" />
+        <img
+          src="/img/og-image.jpg"
+          alt="Cartell Festa Major 2018"
+          className="infopage--coverimage"
+        />
       </Cell>
       <Cell>
         <p className="infopage--text">
@@ -41,47 +44,53 @@ const Information = () => (
         <div className="infopage--myinfo">
           <p>
             Web:<span> </span>
-            <a
+            <OutboundLink
               href="http://www.okstudio.tech"
               target="_blank"
               className="infopage--links"
             >
               okstudio.tech
-            </a>
+            </OutboundLink>
           </p>
           <p>
             c/e:<span> </span>
-            <a
-              href="mailto:hola@okstudio.tech"
+            <OutboundLink
+              href="mailto:hola@okstudio.tech?subject=[App Festa Major Vilanova]"
               className="infopage--links"
               target="_blank"
             >
               hola@okstudio.tech
-            </a>
+            </OutboundLink>
           </p>
           <p>
             Xarxes socials: <span> </span>
-            <a href="https://www.instagram.com/_okstudio/" target="_blank">
+            <OutboundLink
+              href="https://www.instagram.com/_okstudio/"
+              target="_blank"
+            >
               <FaInstagram
                 color="#007FFF"
                 size="1.5rem"
                 className="infopage--xxss"
               />
-            </a>
-            <a href="https://twitter.com/_okstudio" target="_blank">
+            </OutboundLink>
+            <OutboundLink href="https://twitter.com/_okstudio" target="_blank">
               <FaTwitter
                 color="#007FFF"
                 size="1.5rem"
                 className="infopage--xxss"
               />
-            </a>
-            <a href="https://github.com/oriolcastro/fmvngapp" target="_blank">
+            </OutboundLink>
+            <OutboundLink
+              href="https://github.com/oriolcastro/fmvngapp"
+              target="_blank"
+            >
               <FaGithub
                 color="#007FFF"
                 size="1.5rem"
                 className="infopage--xxss"
               />
-            </a>
+            </OutboundLink>
           </p>
         </div>
       </Cell>
