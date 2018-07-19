@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Grid, Cell, FontIcon } from 'react-md'
 import EventsItems from './eventsitems'
+import { onRouteUpdate } from '../../gatsby-browser'
 import {
   deleteEventFromDb,
   addEventToDb,
@@ -21,8 +22,11 @@ class EventsList extends Component {
     this.loadFavEvents()
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.pathname !== this.props.pathname) {
+  componentDidUpdate() {
+    let e = onRouteUpdate
+    console.log(e)
+    if (e === true) {
+      console.log(e)
       this.loadFavEvents()
     }
   }
