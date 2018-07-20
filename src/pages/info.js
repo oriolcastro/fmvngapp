@@ -20,16 +20,16 @@ const Information = () => (
         <p className="infopage--text">
           Aquesta aplicació mòbil recull totes les activitats incloses dins el
           programa oficial de la Festa Major de Vilanova. Tot el contingut està
-          agafat del programa oficial de la festa i no te cap vinculació amb els
-          Pabordes 2018
+          extret del programa publicat i no te cap vinculació amb els Pabordes
+          2018
         </p>
-        <p>Accedint a l'aplicació podràs:</p>
+        <p>Amb l'aplicació podràs:</p>
 
         <ul>
-          <li>Consultar sense connexió a Internet.</li>
-          <li>Instalar l'applicació en dispositius seleccionats.*</li>
+          <li>Consultar el programa sense connexió.</li>
+          <li>Instalar l'applicació al teu dispositius.*</li>
           <li>Filtrar les activitats per dies.</li>
-          <li>Guardar activitats com a preferides per una millor consulta</li>
+          <li>Guardar activitats com a preferides.</li>
         </ul>
       </Cell>
       <Cell>
@@ -97,11 +97,12 @@ const Information = () => (
       <Cell>
         <div className="infopage--legal">
           *Dispositius mobils amb sistema operatiu Android i que utilitzin el
-          navegador Chrome. Amb la resta de dispositius la funcionalitat
-          d'instalar l'aplicació no apareixerà.
+          navegador Chrome. Funcionalitat no disponible a la resta de
+          dispositius.
         </div>
         <div className="infopage--legal">
-          Aquesta web recull dades anonimes fent ús de l'eina Google Analytics
+          Informació de privacitat: aquesta web recull dades anonimes del seu ús
+          a través de Google Analytics
         </div>
       </Cell>
     </Grid>
