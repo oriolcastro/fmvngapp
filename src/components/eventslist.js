@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Grid, Cell, FontIcon } from 'react-md'
 import EventsItems from './eventsitems'
-import { onRouteUpdate } from '../../gatsby-browser'
 import {
   deleteEventFromDb,
   addEventToDb,
