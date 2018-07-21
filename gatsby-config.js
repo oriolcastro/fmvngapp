@@ -1,6 +1,27 @@
 const config = require('./meta/config')
 require('dotenv').config()
 
+const query = `{
+  allStrapiEvent {
+    edges {
+      node {
+        objectID: id
+        Title
+        Info
+      }
+    }
+  }
+}`
+
+const queries = [
+  {
+    query,
+    transformer: ({ data }) =>
+      data.allStrapiEvent.edges.map(({ node }) => node), // optional
+    indexName: 'events', // overrides main index name, optional
+  },
+]
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -42,6 +63,16 @@ module.exports = {
           identifier: process.env.STRAPI_USER || '',
           password: process.env.STRAPI_PASSWORD || '',
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.MY_ALGOLIA_APP_ID || '',
+        apiKey: process.env.MY_ALGOLIA_ADMIN_API_KEY || '',
+        indexName: 'events', // for all queries
+        queries,
+        chunkSize: 10000, // default: 1000
       },
     },
     'gatsby-plugin-offline',
