@@ -1,12 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { connect } from 'react-redux'
 import MainLayout from '../components/mainlayout'
 import EventsList from '../components/eventslist'
-import { connect } from 'react-redux'
+import Search from '../components/search'
 
 const IndexPage = ({ data, selection }) => {
   return (
     <MainLayout>
+      <Search />
       {data.allStrapiEventlist.edges.map(({ node }, id) => (
         <div>
           {selection === 'Tots els dies' ? (
