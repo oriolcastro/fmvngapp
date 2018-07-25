@@ -28,6 +28,7 @@ const MainHeader = ({
       }
       actions={
         <div>
+          <InstallBtn />
           {showSearch ? (
             <Button
               icon
@@ -49,8 +50,6 @@ const MainHeader = ({
               search
             </Button>
           )}
-
-          <InstallBtn />
         </div>
       }
     />
