@@ -29,13 +29,6 @@ const Search = props => {
 
   return (
     <>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css"
-        />
-      </Helmet>
-
       <InstantSearch
         indexName={algolia.indexName}
         appId={algolia.appId}
