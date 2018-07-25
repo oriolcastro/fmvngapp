@@ -23,7 +23,7 @@ const Search = props => {
           <Hits hitComponent={Hit} />
         </div>
       ) : (
-        <h3>Que estas buscant?</h3>
+        <h3>Que estàs buscant?</h3>
       )
   )
 
