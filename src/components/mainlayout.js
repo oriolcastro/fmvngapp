@@ -26,6 +26,10 @@ const MainLayout = ({ children }) => (
       <meta property="og:url" content={Config.siteUrl} />
       <meta name="twitter:card" content="img/og-image.jpg" />
       <link rel="shortcut icon" href={favicon} />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css"
+      />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"

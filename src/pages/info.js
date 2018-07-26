@@ -30,6 +30,7 @@ const Information = () => (
           <li>Instalar l'applicació al teu dispositius.*</li>
           <li>Filtrar les activitats per dies.</li>
           <li>Guardar activitats com a preferides.</li>
+          <li>Buscar entre totes les activitats del programa.</li>
         </ul>
       </Cell>
       <Cell>

@@ -1,12 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { connect } from 'react-redux'
 import MainLayout from '../components/mainlayout'
 import EventsList from '../components/eventslist'
-import { connect } from 'react-redux'
+import Search from '../components/search'
 
-const IndexPage = ({ data, selection }) => {
+const IndexPage = ({ data, selection, showSearch }) => {
   return (
     <MainLayout>
+      {showSearch && <Search algolia={data.site.siteMetadata.algolia} />}
+
       {data.allStrapiEventlist.edges.map(({ node }, id) => (
         <div>
           {selection === 'Tots els dies' ? (
@@ -36,6 +39,7 @@ const IndexPage = ({ data, selection }) => {
 
 export default connect(state => ({
   selection: state.app.selection,
+  showSearch: state.search.showSearch,
 }))(IndexPage)
 
 export const query = graphql`
@@ -54,6 +58,15 @@ export const query = graphql`
             Day(formatString: "dddd DD", locale: "ca")
             isFav
           }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        algolia {
+          appId
+          searchOnlyApiKey
+          indexName
         }
       }
     }
