@@ -41,10 +41,12 @@ const Search = props => {
         />
 
         <Configure hitsPerPage={3} />
+
         <Content />
+
         <PoweredBy translations={{ searchBy: 'Ofert per' }} />
+        <Divider className="search-divider" />
       </InstantSearch>
-      <Divider className="search-divider" />
     </>
   )
 }
